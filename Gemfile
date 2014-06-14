@@ -53,4 +53,8 @@ gem 'rinku'
 gem 'twitter-text'
 
 group :development, :test do
+ gem 'rspec-rails'
+ gem 'capybara'
+ gem 'launchy'
+ gem "capybara-webkit"
 end
