@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require bootstrap
-//= require bootstrap.min
 //= require turbolinks
 //= require underscore
 //= require backbone
