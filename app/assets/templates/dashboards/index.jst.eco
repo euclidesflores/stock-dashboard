@@ -27,7 +27,9 @@
  <% if !gon.current_user? : %>
 	 <div class="container">
 		 <div class="jumbotron">
-			 <p><a class="btn btn-lg btn-primary" role="button" id="signIn" href="users/auth/twitter" >Sign in with Twitter »</a></p>
+			 <form>
+			 <a class="btn btn-lg btn-primary" role="button" id="signIn" href="users/auth/twitter" >Sign in with Twitter</a>
+			 <form>
 		 </div>
 	 </div>
  <% else :%>

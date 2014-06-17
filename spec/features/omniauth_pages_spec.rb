@@ -1,9 +1,10 @@
 require 'rails_helper'
 
-feature "OmniauthPages", :type => :feature do
-	scenario "Omniauth", :js => true do
-		visit root_path
-		expect(page).to have_content('Sign up with Twitter')
-
+feature "Log in" do
+	context "Signning in", :js => true  do
+		@javascript
+		scenario "Omniauth authentication" do
+		visit '/'
+		end
 	end
 end
