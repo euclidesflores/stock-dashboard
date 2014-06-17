@@ -51,6 +51,7 @@ gem 'json'
 gem 'mime-types'
 gem 'rinku'
 gem 'twitter-text'
+gem 'rails_12factor'
 
 group :development, :test do
  gem 'rspec-rails'
