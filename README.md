@@ -1,4 +1,4 @@
-# A rails app to demonstrate how to use rail, devise, omniauth and backbonejs 
+# A rails app to demonstrate how to use devise, omniauth and backbonejs 
 
 Workflow:
 
