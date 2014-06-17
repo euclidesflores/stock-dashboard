@@ -1,4 +1,4 @@
-= A rails app that uses backbone-on-rails to display stock quotes in real time to demonstrate how to use rail, devise, omniauth and backbonejs 
+# A rails app that uses backbone-on-rails to display stock quotes in real time to demonstrate how to use rail, devise, omniauth and backbonejs 
 
 Workflow:
 
