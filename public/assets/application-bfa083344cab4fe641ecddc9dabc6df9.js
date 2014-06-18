@@ -18134,7 +18134,7 @@ provide("tfw/factories",function(e){using("util/util","util/promise","util/twitt
           __out.push('\n\t <div class="container">\n\t\t <div class="row">\n\t\t\t <div class="col-lg-6">\n\t\t\t\t <div class="input-group">\n\t\t\t\t\t <input type="text" class="form-control" name="stockSymbolTxt" id="stockSymbolTxt" placeholder="Enter stock symbol">\n\t\t\t\t\t <span class="input-group-btn">\n\t\t\t\t\t\t <button class="btn btn-default" type="button" id="searchBtn">Search</button>\n\t\t\t\t\t </span>\n\t\t\t\t </div>\n\t\t\t\t <br>\n\t\t\t\t <div id="error-panel" class="hidden alert alert-warning">\n\t\t\t\t </div>\n\t\t\t </div>\n\t\t </div>\n\t </div>\n\t <div class="container">\n\t\t <table class="table">\n\t\t\t<div class="row">\n\t\t\t  <div id="left-panel" class="col-sm-6 col-md-4">\n\n\t\t\t  </div>\n\t\t\t  <div id="right-panel" class="hidden col-sm-6 col-md-8">\n\t\t\t     <div class="panel panel-primary">\n\t\t\t\t<div class="panel-heading">Latest tweets</div>\n\t\t\t\t  <ul id="tweets" class="list-group">\n\t\t\t\t  </ul>\n\t\t\t\t</div>\n\t\t\t     </div>\n\t\t\t  </div>\n\t\t\t</div>\n\t\t </table>\n\t </div>\n ');
         }
       
-        __out.push('\n\n <div class="container">\n\t <hr>\n\t <footer>\n\t <p>&copy; Euclides Flores 2014</p>\n\t </footer>\n </div>\n\n <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>\n <script src="/assets/bootstrap.min.js"></script>\n\n');
+        __out.push('\n\n <div class="container">\n\t <hr>\n\t <footer>\n\t <p>&copy; Euclides Flores 2014</p>\n\t </footer>\n </div>\n\n <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>\n\n');
       
       }).call(this);
       
