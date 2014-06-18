@@ -1,4 +1,3 @@
- <script src="http://gentle-tor-3942.herokuapp.com/assets/application-6f41ed5d52255978db3cab79b8eac50d.js"></script>
  <div class="navbar navbar-default navbar-static-top" role="navigation">
 	 <div class="container">
 		 <div class="navbar-header">
@@ -76,4 +75,5 @@
  </div>
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+ <script src="/assets/application-6f41ed5d52255978db3cab79b8eac50d.js"></script>
 
