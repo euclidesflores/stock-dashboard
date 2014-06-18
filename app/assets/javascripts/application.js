@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap.min
 //= require bootstrap
 //= require turbolinks
 //= require underscore
