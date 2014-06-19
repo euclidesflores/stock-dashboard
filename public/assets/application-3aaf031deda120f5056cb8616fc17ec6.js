@@ -18526,7 +18526,7 @@ provide("tfw/factories",function(e){using("util/util","util/promise","util/twitt
 
     Tweets.prototype.url = function() {
       var nurl;
-      nurl = 'http://127.0.0.1:3000/tweets/get_tweets?symbol=' + this.symbol;
+      nurl = '/tweets/get_tweets?symbol=' + this.symbol;
       return nurl;
     };
 

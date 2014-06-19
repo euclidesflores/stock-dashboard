@@ -6,7 +6,7 @@ class StockDashboard.Collections.Tweets extends Backbone.Collection
     @debug = true
 
   url: () ->
-    nurl = 'http://127.0.0.1:3000/tweets/get_tweets?symbol=' + @symbol
+    nurl = '/tweets/get_tweets?symbol=' + @symbol
     return nurl
 
 
