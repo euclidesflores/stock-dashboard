@@ -1,0 +1,11 @@
+<% for model in @collection.models: %>
+	<li class="list-group-item">
+	<blockquote class="twitter-tweet" align="center"><p><%- model.get('text') %></p>&mdash; <%- model.get('name_tag') + ' ' + model.get('screen_name_tag') %> <a href="<%= 'https://twitter.com/' + model.get('screen_name') + '/statuses/' + model.get('id') %>" data-datetime=<%= model.get('created_at')%>><%= model.get('date_tz') %></a></blockquote>
+	</li>
+<% end %>
+<script src="/assets/rsvp-latest.js"></script>
+<script src="/assets/basket.min.js"></script>
+<script>
+	basket.require({ url: '/assets/widgets.js' });
+</script>
+

@@ -1,0 +1,26 @@
+<div class="panel panel-primary">
+	<div class="panel-heading"><%= @model.get('name') %></div>
+		<table class="table">
+			<tbody>
+				<tr><td colspan="2"><%= @model.get('stockExchangeInfo') %></td></tr>
+				<tr><td>Price</td><td style='text-align:right'>$<%= @model.get('price') %></td>
+				<tr><td>Previous close</td><td style='text-align:right'>$<%= @model.get('previousClose') %></td>
+					<tr><td>Change</td>
+						<% if @model.get('change') > 0 : %> 
+							<td style='text-align:right'>
+						<% else :%>
+							<td style='color:red;text-align:right'>
+						<% end %>
+							<%= @model.get('change') + ' (' + @model.get('changePercent') + ')' %></td>
+
+				</tr>
+				<tr><td>Volume</td><td style='text-align:right'><%= @model.get('volume') %></td>
+				<tr><td>Open</td><td style='text-align:right'>$<%= @model.get('open') %></td>
+				<tr><td>High</td><td style='text-align:right'>$<%= @model.get('high') %></td>
+				<tr><td>Low</td><td style='text-align:right'>$<%= @model.get('low') %></td>
+				<tr><td>Avg daily vol</td><td style='text-align:right'><%= @model.get('avgDlyVol') %></td>
+				<tr><td>Market cap</td><td style='text-align:right'><%= @model.get('marketCap') %></td>
+			</tbody>
+		</table>
+	</div>
+</div>
