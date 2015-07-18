@@ -6,7 +6,7 @@ default: &default
   pool: 5
   timeout: 5000
   username: postgres
-  port: 5432
+  port: 5431
   host: localhost
 
 development:
