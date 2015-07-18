@@ -3,16 +3,25 @@
 		<table class="table">
 			<tbody>
 				<tr><td colspan="2"><%= @model.get('stockExchangeInfo') %></td></tr>
-				<tr><td>Price</td><td style='text-align:right'>$<%= @model.get('price') %></td>
+				<tr><td>Price</td><td style='text-align:right'>
+				<% if @model.get('price').length > 0 : %>
+					$<%= @model.get('price') %> 	
+					<% else :%>
+						-
+				<% end %>
+			  </td> 	
 				<tr><td>Previous close</td><td style='text-align:right'>$<%= @model.get('previousClose') %></td>
 					<tr><td>Change</td>
-						<% if @model.get('change') > 0 : %> 
-							<td style='text-align:right'>
-						<% else :%>
-							<td style='color:red;text-align:right'>
-						<% end %>
-							<%= @model.get('change') + ' (' + @model.get('changePercent') + ')' %></td>
-
+						<% if @model.get('change').length > 0 : %>  	
+							<% if @model.get('change') > 0 : %> 
+								<td style='text-align:right'>
+							<% else :%>
+								<td style='color:red;text-align:right'>
+							<% end %>
+								<%= @model.get('change') + ' (' + @model.get('changePercent') + ')' %></td>
+						<% else : %>   
+							<td style='text-align:right'>-</td>
+            <% end %>
 				</tr>
 				<tr><td>Volume</td><td style='text-align:right'><%= @model.get('volume') %></td>
 				<tr><td>Open</td><td style='text-align:right'>$<%= @model.get('open') %></td>

@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
+ruby '2.0.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
-gem 'pg'
+gem 'pg', '~> 0.18.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -51,7 +51,6 @@ gem 'json'
 gem 'mime-types'
 gem 'rinku'
 gem 'twitter-text'
-
 gem 'rails_12factor', group: :production
 
 group :development, :test do

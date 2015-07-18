@@ -32,8 +32,8 @@ class StockDashboard.Models.Stock extends Backbone.Model
      @set("lastTradeTime", rawData.LastTradeTime)
      dtf = @getLastTradeDateTime(@get('lastTradeDate'), @get('lastTradeTime'))
      @set("stockExchangeInfo", rawData.StockExchange + ': ' + rawData.Symbol + ' - ' + dtf)
-     @set("price", (if rawData.AskRealTime == null then '0.00' else parseFloat(rawData.AskRealtime).toFixed(2)))
-     @set("change", parseFloat(rawData.ChangeRealtime).toFixed(2))
+     @set("price", (if rawData.AskRealtime == null then '' else parseFloat(rawData.AskRealtime).toFixed(2)))
+     @set("change", (if rawData.ChangeRealtime == null then '' else parseFloat(rawData.ChangeRealtime).toFixed(2)))
      @set("changePercent", @getChangePercentRealtime(rawData.ChangePercentRealtime))
      @set("volume", parseInt(rawData.Volume).toLocaleString())
      @set("open", (if rawData.Open == null then '0.00' else  parseFloat(rawData.Open).toFixed(2)))
@@ -51,5 +51,5 @@ class StockDashboard.Models.Stock extends Backbone.Model
      return dtStr
 
    getChangePercentRealtime: (changePercent) ->
-      return changePercent.replace('N/A - ', '')
+				if changePercent == null then return '' else return changePercent.replace('N/A - ', '')
    

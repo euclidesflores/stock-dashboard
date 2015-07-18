@@ -11,13 +11,10 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap
 //= require turbolinks
 //= require underscore
 //= require backbone
 //= require rsvp-latest
-//= require basket.min
-//= require widgets
 //= require stock_dashboard
 //= require_tree ../templates
 //= require_tree ./models
