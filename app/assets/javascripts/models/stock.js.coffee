@@ -27,14 +27,15 @@ class StockDashboard.Models.Stock extends Backbone.Model
    updateAttributes: (response) ->
      rawData = response.query.results.quote
      @set("name", rawData.Name)
+     console.log(rawData)
      @set("symbol", rawData.Symbol)
      @set("lastTradeDate", rawData.LastTradeDate)
      @set("lastTradeTime", rawData.LastTradeTime)
      dtf = @getLastTradeDateTime(@get('lastTradeDate'), @get('lastTradeTime'))
      @set("stockExchangeInfo", rawData.StockExchange + ': ' + rawData.Symbol + ' - ' + dtf)
-     @set("price", (if rawData.AskRealtime == null then '' else parseFloat(rawData.AskRealtime).toFixed(2)))
-     @set("change", (if rawData.ChangeRealtime == null then '' else parseFloat(rawData.ChangeRealtime).toFixed(2)))
-     @set("changePercent", @getChangePercentRealtime(rawData.ChangePercentRealtime))
+     @set("price", (if rawData.AskRealtime == null then (if rawData.LastTradePriceOnly == null then '' else parseFloat(rawData.LastTradePriceOnly).toFixed(2)) else parseFloat(rawData.AskRealtime).toFixed(2)))
+     @set("change", (if rawData.ChangeRealtime == null then (if rawData.Change == null then '' else parseFloat(rawData.Change).toFixed(2)) else parseFloat(rawData.ChangeRealtime).toFixed(2)))
+     @set("changePercent", @getChangePercentRealtime(rawData.ChangePercentRealtime, rawData.ChangeinPercent))
      @set("volume", parseInt(rawData.Volume).toLocaleString())
      @set("open", (if rawData.Open == null then '0.00' else  parseFloat(rawData.Open).toFixed(2)))
      @set("previousClose", (if rawData.PreviousClose == null then '0.00' else parseFloat(rawData.PreviousClose).toFixed(2)))
@@ -50,6 +51,6 @@ class StockDashboard.Models.Stock extends Backbone.Model
      dtStr = monthNames[dt.getMonth()] + ' ' + dt.getDate() + ' ' + lastTradeTime
      return dtStr
 
-   getChangePercentRealtime: (changePercent) ->
-				if changePercent == null then return '' else return changePercent.replace('N/A - ', '')
+   getChangePercentRealtime: (changePercent, changeinPercent) ->
+				if changePercent == null then return changeinPercent else return changePercent.replace('N/A - ', '')
    
